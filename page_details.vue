@@ -3,7 +3,7 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-                <div class="inside_header_background" :style="{ background: 'linear-gradient(0deg, rgba(215, 78, 34, 0.8), rgba(245, 111, 68, 0.8)), url(' + pageBanner.image_url + ') center center no-repeat rgba(215, 78, 34)' }">
+                <div class="inside_header_background" :style="{ background: 'linear-gradient(0deg, rgba(215, 78, 34, 0.8), rgba(215, 78, 34, 0.8)), url(' + pageBanner.image_url + ') center center no-repeat rgba(215, 78, 34)' }">
                     <div class="main_container">
                         <h2 v-if="currentPage.title" v-html="currentPage.title"></h2>
                     </div>
