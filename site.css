@@ -45,12 +45,12 @@
 }
 
 /* *** COLOURS *** */
-$primary: #DC4620;
+$primary: #436016;
 $primaryRGB: rgb(183, 2, 0);
 $secondary: #8f7032;
 $accent: #BD461E;
 $text: #000;
-$secondary_text: #505050;
+$secondary_text: #fff;
 
 /* *** GENERAL STYLES *** */
 html { 
