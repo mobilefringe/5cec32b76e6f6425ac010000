@@ -22,6 +22,7 @@
                 <div>
                     <p class="footer_text">
                         <a :href="siteInfo.leasing" target="_blank">Leasing</a> |
+                         <router-link to="/pages/terravistavillage-retailer-hub" exact>Retailer Hub</router-link> |
                         <router-link to="/terms-of-use" exact>Terms of Use</router-link> |
                         <router-link to="/privacy-policy" exact>Privacy Policy</router-link>
                     </p>
