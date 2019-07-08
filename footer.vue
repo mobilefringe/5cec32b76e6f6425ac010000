@@ -48,7 +48,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "json!site.json", "vue!vue_facebook"], function (Vue, Vuex, moment, tz, VueMoment, site, vueFacebookPage) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "json!site.json", "vue!vue_facebook", "campaignMonitor"], function (Vue, Vuex, moment, tz, VueMoment, site, vueFacebookPage, campaignMonitor) {
         return Vue.component("footer-component", {
             template: template, // the variable template will be injected,
             data: function data() {
