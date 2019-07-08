@@ -12,7 +12,7 @@
                     <form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A46759A1AD40955036554651267C4F35EE6D3917AC837DE3339708AB45B4FB58DAC183C6EB056C90BC24B0DD17721D235">	
                         <label class="accessibility" for="fieldEmail">Email</label>
                         <input id="fieldEmail" name="cm-ydiuthh-ydiuthh" type="email" class="js-cm-email-input" placeholder="Your Email" required />
-                        <button id="newsletter_submit" class="js-cm-submit-button" type="submit">Subscribe Subscribe To Our Newsletter</button>
+                        <button id="newsletter_submit" class="js-cm-submit-button" type="submit">Subscribe To Our Newsletter</button>
                     </form>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
