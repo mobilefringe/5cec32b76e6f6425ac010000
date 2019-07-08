@@ -711,6 +711,13 @@ footer {
         transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
     }
 }
+#newsletter_submit:hover {
+    text-decoration: none;
+    &:before {
+        -webkit-transform: scale3d(9, 9, 1);
+        transform: scale3d(9, 9, 1);
+    }
+}
 
 .footer_privacy {
     padding: 15px 0;
