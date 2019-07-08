@@ -9,7 +9,11 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 footer_newsletter">
                     <p class="footer_heading">NEWSLETTER SUBSCRIPTION</p>
                     <p>Stay up to date on the latest news from {{ property.name }}!</p>
-                    <form id="mktoForm_3302"></form>
+                    <form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A46759A1AD40955036554651267C4F35EE6D3917AC837DE3339708AB45B4FB58DAC183C6EB056C90BC24B0DD17721D235">	
+                        <label class="accessibility" for="fieldEmail">Email</label>
+                        <input id="fieldEmail" name="cm-ydiuthh-ydiuthh" type="email" class="js-cm-email-input" placeholder="Your Email" required />
+                        <button id="newsletter_submit" class="js-cm-submit-button" type="submit">Subscribe Subscribe To Our Newsletter</button>
+                    </form>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <p class="footer_heading">FOLLOW US ON FACEBOOK</p>
@@ -50,12 +54,8 @@
             data: function data() {
                 return {
                     dataLoaded: false,
-                    siteInfo: site,
-                    newsletter_email: ""
+                    siteInfo: site
                 }
-            },
-            mounted () {
-                window.MktoForms2.loadForm("//app-sj03.marketo.com", "561-LJY-710", 3302);
             },
             created () {
                 this.dataLoaded = true;
@@ -63,21 +63,13 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'timezone',
-                    'findRepoByName'
+                    'timezone'
                 ]),
                 copyright_year() {
                     return moment().year();
                 },
                 getPropertyAddress() {
                     return this.property.address1 + ' ' + this.property.city + ' ' + this.property.country + ' ' + this.property.province_state
-                }
-            },
-            methods: {
-                newsletterRoute() {
-                    this.show_menu = false;
-                    this.$router.push("/newsletter?email=" + this.newsletter_email);
-                    this.newsletter_email = "";
                 }
             }
         });
