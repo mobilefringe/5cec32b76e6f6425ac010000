@@ -143,6 +143,16 @@ hr {
 strong {
     font-family: Avenir-Heavy; 
 }
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 /* *** LOADING *** */
 #overlay {
     position: fixed;
@@ -274,6 +284,72 @@ strong {
 }
 #menu-icon {
     display: none;
+}
+.website-toggle {
+    margin-right: 30px;
+}
+#center-select.v-select {
+    width: 100%;
+    .dropdown-toggle {
+        width: 185px;
+        border-radius: 0;
+        border: 1px solid #000;
+    }
+    .selected-tag {
+        margin: 0;
+        padding: 3px 5px;
+        width: calc(100% - 25px);
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: unset;
+        font-family: Avenir-Book, sans-serif;
+        // font-size: 0.75rem;
+        font-size: 0.6875rem;
+        text-align: left;
+        color: #555;
+    }
+    .open-indicator {
+        bottom: 2px;
+        &:before {
+            border-color: $text;
+        }
+    }
+    input.form-control {
+        width: calc(100% - 25px) !important;
+        height: 28px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .dropdown-menu {
+        padding: 0;
+        border-top: #eee;
+        // border-top-left-radius: 4px;
+        // border-top-right-radius: 4px;
+        border-radius: 0;
+        font-family: Avenir-Book, sans-serif;
+        li {
+            font-family: Avenir-Book, sans-serif;
+            font-size: 0.6875rem;
+            color: #555;
+            a {
+                white-space: initial;
+                // text-transform: uppercase;
+            }
+        }
+    }
+    li a {
+        padding: 5px 10px;
+    }
+    .dropdown-menu > .highlight > a {
+        background: $primary;
+        color: $secondary_text;
+    }
 }
 .search_component_wrapper {
     margin-right: 30px;
@@ -1677,6 +1753,14 @@ textarea.form-control {
         }
         .search_component_wrapper {
             margin: 0;
+        }
+        .website-toggle {
+            margin: 30px 0;
+        }
+        #center-select.v-select {
+            .dropdown-menu {
+                margin: 0;
+            }
         }
         .mobile_property_address.center {
             margin: 20px;
