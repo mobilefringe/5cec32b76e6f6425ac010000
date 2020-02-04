@@ -117,12 +117,12 @@
                                         <label class="visuallyhidden" for="center-select">Choose a Center to Navigate to:</label>
                                         <v-select v-model="websiteToggle" :options="websiteList" :searchable="false" :on-change="changeRoute" placeholder="Choose a Center" id="center-select" transition="menu-fade"></v-select>
                                     </div>
-                                    <div class="mobile_property_address center">
-                                        <p>
-                                            {{ property.name }}<br>
-                                            <a :href="siteInfo.googleMapURL" target="_blank">{{ getPropertyAddress }}</a>
-                                        </p>
-                                    </div>
+                                    <!--<div class="mobile_property_address center">-->
+                                    <!--    <p>-->
+                                    <!--        {{ property.name }}<br>-->
+                                    <!--        <a :href="siteInfo.googleMapURL" target="_blank">{{ getPropertyAddress }}</a>-->
+                                    <!--    </p>-->
+                                    <!--</div>-->
     							</div>
     						</nav>
     				    </transition>
