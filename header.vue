@@ -319,7 +319,7 @@
                         } else if (_.includes(website_name, "day creek marketplace")) {
                             new_url = "https://www.daycreekmarketplace.com/"
                         }
-                        ga('send', 'event', 'Search Keywords', 'reroute', new_url);
+                        ga('send', 'event', 'Website Toggle', 'reroute', new_url);
                         if (new_url){
                             window.location.href = new_url;
                         }
