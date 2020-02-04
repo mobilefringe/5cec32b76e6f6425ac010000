@@ -307,6 +307,23 @@
                     this.$nextTick(function() {
                         this.showDropDown = !this.showDropDown;
                     });
+                },
+                changeRoute(id) {
+                    this.$nextTick(function() {
+                        var website_name = _.lowerCase(id);
+                        var new_url = "";
+                        if (_.includes(website_name, "alta loma square")) {
+                            new_url = "https://altalomasquare.com"
+                        } else if (_.includes(website_name, "central park plaza")) {
+                            new_url = "https://www.shopcentralparkplaza.com/"
+                        } else if (_.includes(website_name, "day creek marketplace")) {
+                            new_url = "https://www.daycreekmarketplace.com/"
+                        }
+                        ga('send', 'event', 'Search Keywords', 'reroute', new_url);
+                        if (new_url){
+                            window.location.href = new_url;
+                        }
+                    });
                 }
             },
             beforeDestroy: function() {
