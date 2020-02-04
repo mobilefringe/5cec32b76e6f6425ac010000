@@ -134,8 +134,9 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "bootstrap-vue", "vue!search-component", "json!site.json", "json!social.json"], function (Vue, Vuex, BootstrapVue, SearchComponent, site, social) {
+    define(["Vue", "vuex", "bootstrap-vue", "vue-select", "vue!search-component", "json!site.json", "json!social.json"], function (Vue, Vuex, BootstrapVue, VueSelect, SearchComponent, site, social) {
         Vue.use(BootstrapVue);
+         Vue.component('v-select', VueSelect.VueSelect);
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
             data: function () {
@@ -152,7 +153,13 @@
                     keys: ["name", "description", "tags", "keywords", "store.name"],
                     headerReady: false,
                     isMobile: false,
-                    isTablet: false
+                    isTablet: false,
+                    websiteToggle: "Save More in Rancho",
+                    websiteList: [
+                        "Central Park Plaza",
+                        "Day Creek Marketplace",
+                        "Terra Vista Village"
+                    ]
                 }
             },
             props:['menu_items'],
