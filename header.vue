@@ -156,9 +156,9 @@
                     isTablet: false,
                     websiteToggle: "Save More in Rancho",
                     websiteList: [
+                        "Alta Loma Square",
                         "Central Park Plaza",
-                        "Day Creek Marketplace",
-                        "Terra Vista Village"
+                        "Day Creek Marketplace"
                     ]
                 }
             },
