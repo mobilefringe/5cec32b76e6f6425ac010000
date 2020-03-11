@@ -18,7 +18,7 @@ require.config({
         
         // 'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
         
-        'vue-meta': 'https://unpkg.com/vue-meta/dist/vue-meta.min.js',
+        'vue-meta': 'https://unpkg.com/vue-meta/dist/vue-meta.min',
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
         'datastore_mutation_types': 'https://mmvue.codecloudapp.com/datastore_mutation_types',
         'datastore_getters': 'https://mmvue.codecloudapp.com/datastore_getters',
