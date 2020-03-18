@@ -48,7 +48,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
 
     Vue.use(Meta, {
        keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
-       tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
+    //   tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
     });
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
