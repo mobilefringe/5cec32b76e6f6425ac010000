@@ -65,8 +65,7 @@
                     meta: {
                        meta_title: "",
                        meta_description: "",
-                       meta_keywords: "",
-                       meta_image: ""
+                       meta_keywords: ""
                     }
                 }
             },
@@ -126,7 +125,7 @@
                      { name: 'keywords',  vmid: 'keywords', content: this.meta.meta_keywords },
                      { property: 'og:title', vmid: 'og:title', content: this.meta.meta_title },
                      { property: 'og:description', vmid: 'og:description', content: this.meta.meta_description },
-                     { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
+                    //  { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
                   ]
                }
             }
