@@ -55,8 +55,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
-
-    // import vueHeadful from 'vue-headful';
     
     
     /* initialize router */
