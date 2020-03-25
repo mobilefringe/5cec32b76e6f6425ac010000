@@ -19,7 +19,9 @@ require.config({
         // 'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
         // 'prerender': 'https://cdn.jsdelivr.net/npm/prerender-spa-plugin@3.4.0/index.min.js',
         
-        'vue-meta': 'https://unpkg.com/vue-meta/dist/vue-meta.min',
+        // 'vue-meta': 'https://unpkg.com/vue-meta/dist/vue-meta.min',
+        'vue-headful': 'https://cdn.jsdelivr.net/npm/vue-headful@2.1.0/dist/vue-headful.min.js',
+        
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
         'datastore_mutation_types': 'https://mmvue.codecloudapp.com/datastore_mutation_types',
         'datastore_getters': 'https://mmvue.codecloudapp.com/datastore_getters',
@@ -44,7 +46,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'moment-timezone', 'vue-meta', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'json!menu_items.json', 'json!site.json', 'vue!loader.vue'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, tz, Meta, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent, MenuItems, site, Loader) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'moment-timezone', 'vue-meta', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'json!menu_items.json', 'json!site.json', 'vue!loader.vue', 'vue-headful'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, tz, Meta, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent, MenuItems, site, Loader, vueHeadful) {
 
     Vue.use(Meta, {
        keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
@@ -53,6 +55,9 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
+
+    // import vueHeadful from 'vue-headful';
+    
     
     /* initialize router */
     const router = new VueRouter({
