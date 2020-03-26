@@ -17,11 +17,9 @@ require.config({
         'js-cookie': 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min',
         
         // 'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
-        // 'prerender': 'https://cdn.jsdelivr.net/npm/prerender-spa-plugin@3.4.0/index.min',
+        // 'prerender': 'https://cdn.jsdelivr.net/npm/prerender-spa-plugin@3.4.0/index.min.js',
         
-        // 'vue-meta': 'https://unpkg.com/vue-meta/dist/vue-meta.min',
-        'vue-headful': 'https://cdn.jsdelivr.net/npm/vue-headful@2.1.0/dist/vue-headful.min',
-        
+        'vue-meta': 'https://unpkg.com/vue-meta/dist/vue-meta.min',
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
         'datastore_mutation_types': 'https://mmvue.codecloudapp.com/datastore_mutation_types',
         'datastore_getters': 'https://mmvue.codecloudapp.com/datastore_getters',
@@ -46,17 +44,15 @@ require.config({
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'moment-timezone', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'json!menu_items.json', 'json!site.json', 'vue!loader.vue', 'vue-headful'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, tz, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent, MenuItems, site, Loader, vueHeadful) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'moment-timezone', 'vue-meta', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'json!menu_items.json', 'json!site.json', 'vue!loader.vue'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, tz, Meta, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent, MenuItems, site, Loader) {
 
+    Vue.use(Meta, {
+       keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
+    //   tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
+    });
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
-    
-    // Vue.use(vueHeadful);
-    Vue.use(vueHeadful, {
-        key: 'myMetaTags' // custom key for component option
-    })
-    
     
     /* initialize router */
     const router = new VueRouter({
