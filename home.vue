@@ -1,5 +1,9 @@
 <template>
     <div><!-- without an outer container div this component template will not render -->
+        <vue-headful
+            title="Title from vue-headful"
+            description="Description from vue-headful"
+        />
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
@@ -45,7 +49,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue-meta", "vue!vue-slick", "vue!welcome_msg"], function (Vue, Vuex, Meta, slick, welcomeMessage) {
+    define(["Vue", "vuex", "vue-meta", "vue!vue-slick", "vue!welcome_msg", "vue-headful"], function (Vue, Vuex, Meta, slick, welcomeMessage, vueHeadful) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -73,6 +77,7 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;  
                     this.meta = this.findMetaDataByPath(this.$route.path);
+                    console.log(this.meta)
                 });
             },
             computed: {
@@ -102,7 +107,10 @@
                 },
                 featureItems() {
                     return _.slice(this.$store.state.feature_items, 0, 3);
-                }
+                },
+                // testing meta grab 
+                this.meta.meta_title = 
+                
             },
             methods: {
                 loadData: async function() {
