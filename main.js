@@ -52,7 +52,10 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     
-    Vue.use(vueHeadful);
+    // Vue.use(vueHeadful);
+    Vue.use(vueHeadful, {
+        key: 'myMetaTags' // custom key for component option
+    })
     
     
     /* initialize router */
