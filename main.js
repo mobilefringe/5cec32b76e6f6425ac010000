@@ -142,12 +142,20 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
             // utility method to allow user to change locale value
             changeLocale: function(val) {
                 this.locale = val; // this will update the data store, which in turn will trigger the watcher to update the locale in the system
-            }
+            },
+            setTimeout(() => {
+                this.headful.title = 'Dynamic async title';
+            }, 3000);
         },
         router: router,
         store,
         i18n,
         // new 
-        vueHeadful
+        vueHeadful,
+        headful() {
+            return {
+                title: 'Dynamic title',
+            };
+        },
     });
 });
