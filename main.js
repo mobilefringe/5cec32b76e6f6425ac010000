@@ -17,10 +17,10 @@ require.config({
         'js-cookie': 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min',
         
         // 'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
-        // 'prerender': 'https://cdn.jsdelivr.net/npm/prerender-spa-plugin@3.4.0/index.min.js',
+        // 'prerender': 'https://cdn.jsdelivr.net/npm/prerender-spa-plugin@3.4.0/index.min',
         
         // 'vue-meta': 'https://unpkg.com/vue-meta/dist/vue-meta.min',
-        'vue-headful': 'https://cdn.jsdelivr.net/npm/vue-headful@2.1.0/dist/vue-headful.min.js',
+        'vue-headful': 'https://cdn.jsdelivr.net/npm/vue-headful@2.1.0/dist/vue-headful.min',
         
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
         'datastore_mutation_types': 'https://mmvue.codecloudapp.com/datastore_mutation_types',
