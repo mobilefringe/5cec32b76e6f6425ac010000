@@ -56,6 +56,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     
+    Vue.component('vue-headful', vueHeadful);
+    
     
     /* initialize router */
     const router = new VueRouter({
