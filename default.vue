@@ -1,9 +1,9 @@
 <template>
     <div>
-        <vue-headful
-            :title="title"
-            description="Static description"
-        />
+        <!--<vue-headful-->
+        <!--    :title="title"-->
+        <!--    description="Static description"-->
+        <!--/>-->
         <h1 class="accessibility">{{ property.name }}</h1>
         <router-view></router-view>
     </div>
@@ -21,10 +21,12 @@
                     //   meta_keywords: "",
                     //   meta_image: ""
                     // }
+                    
+                    // headful
                     title: 'Dynamic title',
                 }
             },
-            
+            // headful
             mounted() {
                 // dummy async operation to show watcher on properties
                 setTimeout(() => {
