@@ -844,7 +844,7 @@ footer {
                 padding: 0;
                 width: 16px;
                 height: 16px;
-                border: 2px solid $secondary_text;
+                border: 2px solid $primary;
                 border-radius: 20px;
                 background-color: transparent;
                 font-size: 0;
@@ -1948,8 +1948,11 @@ textarea.form-control {
             }
         }
     }
-    .home_banner_container .banner_image {
-        height: 200px;
+     .home_banner_container .banner_image {
+        height: 150px;
+    }
+    .home_banner_container .slick-dots {
+        bottom: 10px;
     }
     .feature_item {
         .feature_image_container {
