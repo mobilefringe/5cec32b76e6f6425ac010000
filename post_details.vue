@@ -87,6 +87,9 @@
                     if (this.currentPost === null || this.currentPost === undefined) {
                         this.$router.replace({ name: 'posts' });
                     }
+                    if(this.currentPost.slug == "store-status-at-terra-vista-village") {
+                        gtag('event', 'conversion', {'send_to': 'AW-718925610/62gqCO-FhcYBEKre59YC'});
+                    }
                 },
                 truncate(val_body) {
                     var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
