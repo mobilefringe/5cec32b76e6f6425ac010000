@@ -63,6 +63,7 @@
             beforeRouteUpdate (to, from, next) {
                 this.meta = this.findMetaDataByPath(to.path);
                 this.$emit('updateHead')
+                console.log('this.meta', this.meta)
                 next();
             },
             computed: {
