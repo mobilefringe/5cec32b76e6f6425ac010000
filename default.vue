@@ -11,7 +11,7 @@
 
 <script>
     // define(["Vue", "vuex",  "vue-headful"], function(Vue, Vuex,  vueHeadful) {
-     define(["Vue", "vuex", "vue-meta"], function(Vue, Vuex, Meta) {
+    define(["Vue", "vuex", "vue-meta"], function(Vue, Vuex, Meta) {
         return Vue.component("default-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -43,6 +43,7 @@
             },
             beforeRouteUpdate (to, from, next) {
                 this.meta = this.findMetaDataByPath(to.path);
+                this.$emit('updateHead')
                 next();
             },
             computed: {
