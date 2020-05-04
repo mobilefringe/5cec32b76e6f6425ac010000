@@ -11,7 +11,7 @@
 
 <script>
     // define(["Vue", "vuex",  "vue-headful"], function(Vue, Vuex,  vueHeadful) {
-    define(["Vue", "vuex", "vue-meta"], function(Vue, Vuex, Meta) {
+    define(["Vue", "vuex"], function(Vue, Vuex) {
         return Vue.component("default-component", {
             template: template, // the variable template will be injected
             head: {
